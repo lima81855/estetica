@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algi Estética | Protocolos Injetáveis de Alta Performance em SBC</title>
+  <meta name="description" content="Descubra o segredo dos protocolos injetáveis e soroterapia personalizada em São Bernardo do Campo. Nutrição celular direta de 100% de absorção para energia, pele radiante, emagrecimento e saúde capilar.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-primary: #FAF6F0;
+      --bg-card: #FFFFFF;
+      --bg-accent: #F4EBE1;
+      --text-main: #2B2523;
+      --text-muted: #655B56;
+      --brand-gold: #C5A059;
+      --brand-gold-dark: #A4813C;
+      --brand-cta: #06D6A0;
+      --brand-cta-hover: #05B386;
+      --brand-cta-text: #05382B;
+      --border-color: #E8DEC9;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-soft: 0 10px 30px rgba(43, 37, 35, 0.05);
+      --shadow-hover: 0 18px 40px rgba(197, 160, 89, 0.18);
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER & NAV */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(250, 246, 240, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .logo-badge {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--brand-gold), var(--brand-gold-dark));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-sub {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--brand-gold);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 500;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-gold);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--brand-cta);
+      color: var(--brand-cta-text);
+      box-shadow: 0 8px 24px rgba(6, 214, 160, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-cta-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(6, 214, 160, 0.4);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--brand-gold), var(--brand-gold-dark));
+      color: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(197, 160, 89, 0.3);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(197, 160, 89, 0.4);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 165px 0 95px;
+      position: relative;
+      background: radial-gradient(circle at 80% 20%, #FFF1E0 0%, transparent 65%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--brand-gold-dark);
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(197, 160, 89, 0.1);
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      line-height: 1.15;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--brand-gold);
+      font-style: italic;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+
+    .hero-proof-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .proof-item i {
+      color: var(--brand-gold);
+      font-size: 16px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    .hero-img-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+      border: 4px solid #FFFFFF;
+    }
+
+    .hero-img-card img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-float-card {
+      position: absolute;
+      bottom: -20px;
+      left: -30px;
+      background: #FFFFFF;
+      padding: 18px 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 2;
+    }
+
+    .hero-float-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(197, 160, 89, 0.15);
+      color: var(--brand-gold-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .hero-float-text h4 {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .hero-float-text p {
+      font-size: 12px;
+      margin: 0;
+      color: var(--text-muted);
+    }
+
+    /* TICKER / MARQUEE */
+    .marquee-container {
+      background: var(--text-main);
+      color: #FFFFFF;
+      padding: 16px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      animation: marquee 25s linear infinite;
+    }
+
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-right: 40px;
+      text-transform: uppercase;
+    }
+
+    .marquee-item i {
+      color: var(--brand-gold);
+      font-size: 10px;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* SECTION TITLE BUILDER */
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 60px;
+    }
+
+    .section-subtitle {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--brand-gold-dark);
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    /* SEÇÃO DE MECANISMO ÚNICO (POR QUE INJETÁVEIS?) */
+    .mechanism-section {
+      padding: 90px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .mechanism-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .mechanism-box {
+      padding: 36px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .mechanism-box.bad {
+      background: #FFF8F7;
+      border-color: #F8D7DA;
+    }
+
+    .mechanism-box.good {
+      background: #F0FDF4;
+      border-color: #BBF7D0;
+    }
+
+    .mechanism-box h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .mechanism-box.bad h3 { color: #991B1B; }
+    .mechanism-box.good h3 { color: #166534; }
+
+    .mechanism-box p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* SOBRE MIM / AUTORIDADE */
+    .about-section {
+      padding: 100px 0;
+      background: var(--bg-primary);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-soft);
+      border: 4px solid #FFFFFF;
+    }
+
+    .about-img img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 32px 0;
+    }
+
+    .about-box {
+      background: #FFFFFF;
+      padding: 20px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .about-box i {
+      font-size: 24px;
+      color: var(--brand-gold);
+      margin-bottom: 10px;
+    }
+
+    .about-box h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .about-box p {
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* IDENTIFICAÇÃO (PAINS / SITUAÇÕES) */
+    .pains-section {
+      padding: 100px 0;
+      background: var(--bg-accent);
+    }
+
+    .pains-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .pain-card {
+      background: #FFFFFF;
+      padding: 32px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .pain-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--brand-gold);
+    }
+
+    .pain-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(197, 160, 89, 0.12);
+      color: var(--brand-gold-dark);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .pain-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .pain-card p {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* PROTOCOLOS (VITRINE DE SERVIÇOS DE ALTA COPY) */
+    .protocols-section {
+      padding: 100px 0;
+      background: var(--bg-primary);
+    }
+
+    .protocol-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 32px;
+    }
+
+    .protocol-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .protocol-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--brand-gold);
+    }
+
+    .protocol-tag {
+      align-self: flex-start;
+      padding: 4px 14px;
+      background: rgba(197, 160, 89, 0.15);
+      color: var(--brand-gold-dark);
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .protocol-card h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+
+    .protocol-card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .protocol-features {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .protocol-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .protocol-features i {
+      color: var(--brand-cta);
+    }
+
+    /* PASSO A PASSO */
+    .steps-section {
+      padding: 100px 0;
+      background: #FFFFFF;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+      position: relative;
+    }
+
+    .step-card {
+      background: var(--bg-primary);
+      padding: 32px 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .step-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--brand-gold);
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+
+    .step-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* FAQ ACCORDION */
+    .faq-section {
+      padding: 100px 0;
+      background: var(--bg-accent);
+    }
+
+    .faq-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .faq-question i {
+      transition: var(--transition);
+      color: var(--brand-gold-dark);
+    }
+
+    .faq-answer {
+      padding: 0 24px 24px;
+      display: none;
+      color: var(--text-muted);
+      font-size: 15px;
+      border-top: 1px solid #F4EBE1;
+      padding-top: 16px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    /* CTA BANNER FINAL */
+    .cta-banner {
+      padding: 90px 0;
+      background: linear-gradient(135deg, #2B2523 0%, #1A1615 100%);
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .cta-banner h2 {
+      font-size: 42px;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .cta-banner p {
+      color: #D9D2C4;
+      font-size: 18px;
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1A1615;
+      color: #A49B94;
+      padding: 60px 0 30px;
+      border-top: 1px solid #36302D;
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand h3 {
+      color: #FFFFFF;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .footer-links h4 {
+      color: #FFFFFF;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #A49B94;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--brand-gold);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #2B2523;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 992px) {
+      .hero-grid, .about-grid, .mechanism-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero h1 {
+        font-size: 36px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="logo">
+          <div class="logo-badge">A</div>
+          <div>
+            <span class="logo-text">Algi Estética</span>
+            <span class="logo-sub">Soroterapia & Injetáveis VIP</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#mecanismo">Por Que Injetáveis?</a></li>
+          <li><a href="#sobre">Sobre a Clínica</a></li>
+          <li><a href="#protocolos">Protocolos VIP</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+
+        <a href="https://api.whatsapp.com/send?phone=5511999670982&text=Ola!%20Gostaria%20de%20agendar%20minha%20Avaliacao%20VIP%20na%20Algi%20Estetical!" target="_blank" class="btn btn-primary">
+          <i class="fa-brands me-2 fa-whatsapp"></i> Agendar Avaliação VIP
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (PERSUASÃO MÁXIMA) -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-sparkles"></i> Nutrição Celular Direta de Alta Absorção
+          </div>
+          <h1>Chega de cansaço e fórmulas que não funcionam. Descubra a <span>ciência dos injetáveis</span>.</h1>
+          <p>Enquanto suplementos orais perdem até 80% dos ativos no seu estômago, os <strong>Protocolos Injetáveis da Algi Estética</strong> entregam 100% dos nutrientes na sua corrente sanguínea para resultados visíveis em dias.</p>
+          
+          <div class="hero-proof-bullets">
+            <div class="proof-item"><i class="fa-solid fa-circle-check"></i> Disposição e vitalidade imediata sem café ou estimulantes</div>
+            <div class="proof-item"><i class="fa-solid fa-circle-check"></i> Estímulo natural de colágeno profundo & efeito Glow sem filtro</div>
+            <div class="proof-item"><i class="fa-solid fa-circle-check"></i> Protocolos 100% individualizados sob avaliação minuciosa</div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="https://api.whatsapp.com/send?phone=5511999670982&text=Ola!%20Quero%20resgatar%20minha%20Avaliacao%20Personalizada!" target="_blank" class="btn btn-primary" style="padding: 18px 38px; font-size: 16px;">
+              <i class="fa-brands fa-whatsapp" style="font-size: 22px;"></i> Resgatar Avaliação Personalizada
+            </a>
+            <a href="#protocolos" class="btn btn-gold">
+              Ver Protocolos Exclusivos
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="hero-img-card">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Atendimento de Elite Algi Estética">
+          </div>
+
+          <div class="hero-float-card">
+            <div class="hero-float-icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="hero-float-text">
+              <h4>Absorção 100% Direta</h4>
+              <p>Sem passar pelo trato digestivo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE TICKER -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <div class="marquee-item"><i class="fa-solid fa-gem"></i> SOROTERAPIA & INJETÁVEIS DE ALTA PERFORMANCE</div>
+      <div class="marquee-item"><i class="fa-solid fa-gem"></i> DISPOSIÇÃO • PELE RADIANTE • CAPILAR • EMAGRECIMENTO</div>
+      <div class="marquee-item"><i class="fa-solid fa-gem"></i> ATENDIMENTO VIP EM SÃO BERNARDO DO CAMPO</div>
+      <div class="marquee-item"><i class="fa-solid fa-gem"></i> SOROTERAPIA & INJETÁVEIS DE ALTA PERFORMANCE</div>
+      <div class="marquee-item"><i class="fa-solid fa-gem"></i> DISPOSIÇÃO • PELE RADIANTE • CAPILAR • EMAGRECIMENTO</div>
+      <div class="marquee-item"><i class="fa-solid fa-gem"></i> ATENDIMENTO VIP EM SÃO BERNARDO DO CAMPO</div>
+    </div>
+  </div>
+
+  <!-- POR QUE INJETÁVEIS? (MECANISMO ÚNICO) -->
+  <section class="mechanism-section" id="mecanismo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">A Ciência da Nutrição Celular</span>
+        <h2 class="section-title">Por que comprimidos comuns continuam falhando com você?</h2>
+      </div>
+
+      <div class="mechanism-grid">
+        <div class="mechanism-box bad">
+          <h3><i class="fa-solid fa-xmark-circle me-2"></i> Suplementos Orais Comuns</h3>
+          <p>Ao engolir pílulas ou colágenos em pó, o ácido do seu estômago e o fígado destroem de <strong>70% a 85% dos nutrientes</strong> antes mesmo que eles cheguem às suas células.</p>
+          <p>O resultado é dinheiro jogado fora em potes que demoram meses para dar um resultado sutil.</p>
+        </div>
+
+        <div class="mechanism-box good">
+          <h3><i class="fa-solid fa-check-circle me-2"></i> Protocolos Injetáveis Algi Estética</h3>
+          <p>Aplicação precisa diretamente na corrente sanguínea ou tecido-alvo. A biodisponibilidade é de <strong>100% imediata</strong>.</p>
+          <p>Seu corpo recebe a dosagem exata que precisa para restaurar energia, estancar a queda capilar e renovar a pele sem sobrecarregar seu estômago.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOCÊ SE IDENTIFICA? (DORES REAIS DO CLIENTE) -->
+  <section class="pains-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Sinais do Seu Corpo</span>
+        <h2 class="section-title">Você sente que o seu corpo está pedindo socorro nestes pontos?</h2>
+      </div>
+
+      <div class="pains-grid">
+        <div class="pain-card">
+          <div class="pain-icon"><i class="fa-solid fa-battery-empty"></i></div>
+          <h3>Cansaço Crônico ao Acordar</h3>
+          <p>Você dorme 8 horas, mas acorda parecendo que não descansou nada. Depende de múltiplos cafés para conseguir produzir.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Pele Opaca e com Perda de Firmeza</h3>
+          <p>Aspecto cansado no espelho, linhas de expressão marcando e colágeno caindo mesmo usando cremes caros.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-icon"><i class="fa-solid fa-shower"></i></div>
+          <h3>Cabelo Caindo aos Mufos no Banho</h3>
+          <p>Fios fracos, ralo no couro cabeludo e queda acelerada por estresse, pós-parto ou falta de nutrientes.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Metabolismo Travado & Inchaço</h3>
+          <p>Você se esforça na dieta e nos treinos, mas o metabolismo parece lento e o inchaço retenção não cede.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-icon"><i class="fa-solid fa-shield-virus"></i></div>
+          <h3>Imunidade Oscilante</h3>
+          <p>Qualquer mudança de tempo se transforma em gripe, rinite ou mal-estar que atrapalha seus compromissos.</p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-icon"><i class="fa-solid fa-head-side-virus"></i></div>
+          <h3>Névoa Mental & Ansiedade</h3>
+          <p>Falha de memória, irritabilidade recorrente e sensação constante de sobrecarga emocional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MIM / AUTORIDADE -->
+  <section class="about-section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Especialista Algi Estética">
+        </div>
+
+        <div class="about-content">
+          <span class="section-subtitle">Exclusividade & Ciência</span>
+          <h2>Aqui, você não é mais um número. É um protocolo único.</h2>
+          <p>Na <strong>Algi Estética</strong>, unimos a precisão da ciência injetável ao acolhimento de um atendimento estritamente VIP.</p>
+          <p>Não trabalhamos com "combos genéricos de prateleira". Cada frasco e cada ativo são manipulados e combinados após entendermos minuciosamente o momento biológico do seu corpo.</p>
+
+          <div class="about-highlights">
+            <div class="about-box">
+              <i class="fa-solid fa-dna"></i>
+              <h4>Avaliação Criteriosa</h4>
+              <p>Mapeamento de carências nutricionais e metabólicas.</p>
+            </div>
+            <div class="about-box">
+              <i class="fa-solid fa-vial-circle-check"></i>
+              <h4>Ativos Premium Certificados</h4>
+              <p>Matéria-prima pura de grau médico e máxima pureza.</p>
+            </div>
+          </div>
+
+          <a href="https://api.whatsapp.com/send?phone=5511999670982&text=Ola!%20Gostaria%20de%20falar%20diretamente%20com%20a%20especialista" target="_blank" class="btn btn-gold">
+            Falar Diretamente Comigo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTOCOLOS EXCLUSIVOS (COPY DE ALTA CONVERSÃO) -->
+  <section class="protocols-section" id="protocolos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Menu de Alta Performance</span>
+        <h2 class="section-title">Protocolos Injetáveis Criados para Resultados Rápidos</h2>
+      </div>
+
+      <div class="protocol-cards-grid">
+        <!-- Protocolo 1 -->
+        <div class="protocol-card">
+          <div>
+            <span class="protocol-tag">Drip Energy & Foco</span>
+            <h3>Protocolo Vitality Charge</h3>
+            <p>A injeção de ânimo e energia imediata que seu corpo precisa para acabar com a fadiga mental e o cansaço físico.</p>
+            <ul class="protocol-features">
+              <li><i class="fa-solid fa-circle-check"></i> Foco e disposição instantânea</li>
+              <li><i class="fa-solid fa-circle-check"></i> Restauração mitocondrial rápida</li>
+              <li><i class="fa-solid fa-circle-check"></i> Sem taquicardia ou efeito rebote</li>
+            </ul>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5511999670982&text=Quero%20agendar%20o%20Protocolo%20Vitality%20Charge%20(Energia)" target="_blank" class="btn btn-primary">Quero Este Protocolo</a>
+        </div>
+
+        <!-- Protocolo 2 -->
+        <div class="protocol-card">
+          <div>
+            <span class="protocol-tag">Glow & Colágeno</span>
+            <h3>Protocolo Skin Beauty & Glow</h3>
+            <p>O segredo da pele radiante, firme e rejuvenescida. Nutrientes e indutores de colágeno que restauram o viço sem filtro.</p>
+            <ul class="protocol-features">
+              <li><i class="fa-solid fa-circle-check"></i> Estímulo profundo de colágeno</li>
+              <li><i class="fa-solid fa-circle-check"></i> Ação clareadora e antioxidante</li>
+              <li><i class="fa-solid fa-circle-check"></i> Hidratação celular intensa</li>
+            </ul>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5511999670982&text=Quero%20agendar%20o%20Protocolo%20Skin%20Beauty%20(Glow%20e%20Pele)" target="_blank" class="btn btn-primary">Quero Este Protocolo</a>
+        </div>
+
+        <!-- Protocolo 3 -->
+        <div class="protocol-card">
+          <div>
+            <span class="protocol-tag">Meta-Burn & Definição</span>
+            <h3>Protocolo Slim Accelerator</h3>
+            <p>O impulso biológico que faltava para destravar seu metabolismo, acelerar a queima de gordura e desinchar rapidamente.</p>
+            <ul class="protocol-features">
+              <li><i class="fa-solid fa-circle-check"></i> Acelera o metabolismo lipídico</li>
+              <li><i class="fa-solid fa-circle-check"></i> Redução marcante do inchaço</li>
+              <li><i class="fa-solid fa-circle-check"></i> Preservação de massa magra</li>
+            </ul>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5511999670982&text=Quero%20agendar%20o%20Protocolo%20Slim%20Accelerator%20(Emagrecimento)" target="_blank" class="btn btn-primary">Quero Este Protocolo</a>
+        </div>
+
+        <!-- Protocolo 4 -->
+        <div class="protocol-card">
+          <div>
+            <span class="protocol-tag">Terapia Capilar</span>
+            <h3>Protocolo Hair Growth & Defense</h3>
+            <p>Esteriliza a inflamação e injeta fatores de crescimento diretamente na raiz para estancar a queda capilar em semanas.</p>
+            <ul class="protocol-features">
+              <li><i class="fa-solid fa-circle-check"></i> Estanca a queda acelerada</li>
+              <li><i class="fa-solid fa-circle-check"></i> Estimula novos fios mais densos</li>
+              <li><i class="fa-solid fa-circle-check"></i> Nutrição folicular direta</li>
+            </ul>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5511999670982&text=Quero%20agendar%20o%20Protocolo%20Hair%20Growth%20(Queda%20Capilar)" target="_blank" class="btn btn-primary">Quero Este Protocolo</a>
+        </div>
+
+        <!-- Protocolo 5 -->
+        <div class="protocol-card">
+          <div>
+            <span class="protocol-tag">Blindagem Organismo</span>
+            <h3>Protocolo Immuno Shield</h3>
+            <p>Mega dose de antioxidantes e fortalecedores imunológicos para você ficar blindada contra viroses e indisposições.</p>
+            <ul class="protocol-features">
+              <li><i class="fa-solid fa-circle-check"></i> Escudo contra gripes e rinites</li>
+              <li><i class="fa-solid fa-circle-check"></i> Eliminação de radicais livres</li>
+              <li><i class="fa-solid fa-circle-check"></i> Proteção para rotinas intensas</li>
+            </ul>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5511999670982&text=Quero%20agendar%20o%20Protocolo%20Immuno%20Shield%20(Imunidade)" target="_blank" class="btn btn-primary">Quero Este Protocolo</a>
+        </div>
+
+        <!-- Protocolo 6 -->
+        <div class="protocol-card">
+          <div>
+            <span class="protocol-tag">Zen & Sono Profundo</span>
+            <h3>Protocolo Mind Balance</h3>
+            <p>Modulação de aminoácidos e minerais que reduzem o cortisol do estresse, trazendo calma mental e sono reparador.</p>
+            <ul class="protocol-features">
+              <li><i class="fa-solid fa-circle-check"></i> Redução da irritabilidade</li>
+              <li><i class="fa-solid fa-circle-check"></i> Melhora na qualidade do sono</li>
+              <li><i class="fa-solid fa-circle-check"></i> Sensação de paz e equilíbrio</li>
+            </ul>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5511999670982&text=Quero%20agendar%20o%20Protocolo%20Mind%20Balance%20(Bem-Estar)" target="_blank" class="btn btn-primary">Quero Este Protocolo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASSO A PASSO DA EXPERIÊNCIA VIP -->
+  <section class="steps-section" id="como-funciona">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Experiência Sem Complicação</span>
+        <h2 class="section-title">Como Funciona Sua Transformação</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h4>Diagnóstico VIP</h4>
+          <p>Anamnese detalhada para identificar exatamente os ativos e dosagens que seu corpo necessita no momento.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h4>Fórmula Manipulada</h4>
+          <p>Preparo exclusivo do blend com substâncias ativas puras de alta absorção biológica.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h4>Aplicação Suave</h4>
+          <p>Procedimento rápido, altamente seguro, higiênico e indoloro em ambiente aconchegante.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h4>Resultados e Suporte</h4>
+          <p>Acompanhamento contínuo dos seus níveis de disposição, estética e bem-estar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / PERGUNTAS FREQUENTES -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Transparência Total</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="faq-wrapper">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>A aplicação dói ou deixa marcas?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Não! Utilizamos agulhas de precisão ultra-finas e anestésicos tópicos suaves quando necessário. O procedimento é rápido, confortável e você pode continuar seu dia normalmente logo após a aplicação.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Quanto tempo demora para sentir os resultados?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Para os protocolos de Energia, Foco e Imunidade, muitos pacientes sentem aumento na vitalidade nas primeiras 24 horas. Para estímulo de colágeno, cabelo e emagrecimento, os efeitos são cumulativos e visíveis a partir das primeiras sessões.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Os protocolos são seguros?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            100% seguros. Todos os ativos utilizados são regulamentados, biocompatíveis e formulados por farmácias de manipulação de ponta com laudos de pureza.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Onde fica o consultório?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Nosso espaço VIP fica localizado no Centro de São Bernardo do Campo (Rua José Versolato, 111), com fácil acesso e estacionamento no local.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER FINAL CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Pronta para experimentar o verdadeiro poder da nutrição celular?</h2>
+      <p>Clique abaixo para agendar sua Avaliação VIP no WhatsApp e descubra a combinação exata de ativos para o seu corpo.</p>
+      <a href="https://api.whatsapp.com/send?phone=5511999670982&text=Ola!%20Quero%20agendar%20minha%20Avaliacao%20VIP%20no%20WhatsApp!" target="_blank" class="btn btn-primary" style="padding: 20px 44px; font-size: 18px;">
+        <i class="fa-brands fa-whatsapp" style="font-size: 24px;"></i> Agendar Avaliação VIP no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Algi Estética</h3>
+          <p>Especialista em Soroterapia, Nutrição Celular e Protocolos Injetáveis Personalizados em São Bernardo do Campo / SP.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#mecanismo">Por Que Injetáveis?</a></li>
+            <li><a href="#sobre">Sobre a Clínica</a></li>
+            <li><a href="#protocolos">Protocolos VIP</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Atendimento VIP</h4>
+          <ul>
+            <li><i class="fa-brands fa-whatsapp"></i> (11) 99967-0982</li>
+            <li><i class="fa-brands fa-instagram"></i> @Algi.estetica</li>
+            <li><i class="fa-solid fa-location-dot"></i> Rua José Versolato, 111 - Centro, São Bernardo do Campo / SP</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Algi Estética. Todos os direitos reservados. Copywriting por Agência Antigravity.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion Toggle
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
