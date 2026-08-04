@@ -23,15 +23,12 @@
       --text-muted: #655B56;
       --brand-gold: #C5A059;
       --brand-gold-dark: #A4813C;
-      --brand-cta: #06D6A0;
-      --brand-cta-hover: #05B386;
-      --brand-cta-text: #05382B;
       --border-color: #E8DEC9;
       --radius-sm: 8px;
       --radius-md: 16px;
       --radius-lg: 24px;
       --shadow-soft: 0 10px 30px rgba(43, 37, 35, 0.05);
-      --shadow-hover: 0 18px 40px rgba(197, 160, 89, 0.18);
+      --shadow-hover: 0 18px 40px rgba(197, 160, 89, 0.25);
       --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -155,26 +152,28 @@
     }
 
     .btn-primary {
-      background: var(--brand-cta);
-      color: var(--brand-cta-text);
-      box-shadow: 0 8px 24px rgba(6, 214, 160, 0.3);
+      background: linear-gradient(135deg, #C5A059 0%, #A4813C 100%);
+      color: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(197, 160, 89, 0.35);
     }
 
     .btn-primary:hover {
-      background: var(--brand-cta-hover);
+      background: linear-gradient(135deg, #D8B167 0%, #B58F44 100%);
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(6, 214, 160, 0.4);
+      box-shadow: 0 12px 30px rgba(197, 160, 89, 0.45);
     }
 
     .btn-gold {
-      background: linear-gradient(135deg, var(--brand-gold), var(--brand-gold-dark));
-      color: #FFFFFF;
-      box-shadow: 0 8px 24px rgba(197, 160, 89, 0.3);
+      background: #2B2523;
+      color: #FAF6F0;
+      box-shadow: 0 8px 24px rgba(43, 37, 35, 0.15);
     }
 
     .btn-gold:hover {
+      background: #1A1615;
+      color: #FFFFFF;
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(197, 160, 89, 0.4);
+      box-shadow: 0 12px 30px rgba(43, 37, 35, 0.25);
     }
 
     /* HERO SECTION */
@@ -602,7 +601,7 @@
     }
 
     .protocol-features i {
-      color: var(--brand-cta);
+      color: var(--brand-gold-dark);
     }
 
     /* PASSO A PASSO */
